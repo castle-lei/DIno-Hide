@@ -33,7 +33,14 @@
         if (!saltando && !parado) {
         Saltar();
         }
-    });
+    document.getElementById("btn-reiniciar").addEventListener("touchstart", () => {
+    if (parado) {
+      reset();
+    }
+  });
+}
+
+);
 
     document.getElementById("btn-reiniciar").addEventListener("touchstart", () => {
         if (parado) {
