@@ -1,0 +1,157 @@
+
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #584040;
+}
+.box{
+    width: 920px;
+    height: 280px;
+    margin: 0 auto;
+    position: relative;
+    background: linear-gradient(#B7D6C7,#FFE2D1);
+    overflow: hidden;
+    
+
+}
+.dino{
+    width: 84px;
+    height: 84px;
+
+    position: absolute;
+    bottom: 22px;;
+    left: 42px ;
+    z-index: 2;
+    background: url('dino.png') repeat-x 0px 0px;
+    background-size: 336px 84px;
+    background-position-x:0px ;
+}
+.dino3{
+    width: 84px;
+    height: 84px;
+
+    position: absolute;
+    bottom: 22px;;
+    left: 42px ;
+    z-index: 2;
+    background: url('dino3.png') repeat-x 0px 0px;
+    background-size: 336px 84px;
+    background-position-x:0px ;
+}
+.dino4{
+    width: 84px;
+    height: 84px;
+
+    position: absolute;
+    bottom: 22px;;
+    left: 42px ;
+    z-index: 2;
+    background: url('dino4.png') repeat-x 0px 0px;
+    background-size: 336px 84px;
+    background-position-x:0px ;
+}
+.dino2{
+    width: 84px;
+    height: 84px;
+
+    position: absolute;
+    bottom: 22px;;
+    left: 42px ;
+    z-index: 2;
+    background: url('dino2.png') repeat-x 0px 0px;
+    background-size: 336px 84px;
+    background-position-x:0px ;
+}
+.dino-run{
+    animation: dino-animations 0.25s steps(2) infinite;
+}
+.dino-est{
+    background-position-x:-252px ;
+}
+.suelo{
+
+    width: 200%;
+    height: 42px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url('suelo.png') repeat-x 0px 0px;
+    background-size: 50% 42px;
+    
+}
+.suelo-roca{
+    width: 200%;
+    height: 42px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url('roca.png') repeat-x 0px 0px;
+    background-size: 50% 42px;
+}
+.suelo-agua{
+    width: 200%;
+    height: 42px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url('wat.png') repeat-x 0px 0px;
+    background-size: 50% 42px;
+}
+.score{
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    z-index: 10px;
+    color: #d48872;
+    font-family: Verdana;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.cactus{
+    width: 46px;
+    height: 96px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(cactus1.png) no-repeat;
+}
+
+.wer{
+    width: 46px;
+    height: 96px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(wer.png) no-repeat;
+}
+.roco{
+    width: 46px;
+    height: 96px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(roca\ grande.png) no-repeat;
+}
+@keyframes dino-animations{
+    from{background-position-x:-84px;}
+    to{background-position-x:-252px;}
+}
