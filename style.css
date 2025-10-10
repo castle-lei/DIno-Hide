@@ -56,6 +56,26 @@ body{
     background-size: 336px 84px;
     background-position-x:0px ;
 }
+#mobile-controls {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  z-index: 1000;
+}
+
+#mobile-controls button {
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  background-color: #444;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
 .dino2{
     width: 84px;
     height: 84px;
@@ -93,6 +113,12 @@ body{
     left: 0;
     background: url('roca.png') repeat-x 0px 0px;
     background-size: 50% 42px;
+}
+.salt{
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+
 }
 .suelo-agua{
     width: 200%;

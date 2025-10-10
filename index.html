@@ -10,6 +10,10 @@
         <div class="score">0</div>
         <div class="suelo"></div>
     </div>
+    <div id="mobile-controls">
+        <button id="btn-saltar">Saltar</button>
+        <button id="btn-reiniciar">Reiniciar</button>
+    </div>
 
     <script>
         var time = new Date();
@@ -24,6 +28,19 @@
         } else {
             document.addEventListener("DOMContentLoaded", Init);
         }
+            function ActivarControlesTactiles() {
+        document.getElementById("btn-saltar").addEventListener("touchstart", () => {
+        if (!saltando && !parado) {
+        Saltar();
+        }
+    });
+
+    document.getElementById("btn-reiniciar").addEventListener("touchstart", () => {
+        if (parado) {
+        reset();
+        }
+    });
+    }
 
         function Init() {
             time = new Date();
@@ -70,6 +87,8 @@
             suelo = document.querySelector(".suelo");
             textoScore = document.querySelector(".score");
             document.addEventListener("keydown", HandleKeyDown);
+              ActivarControlesTactiles(); // ← aquí
+
         }
 
         function HandleKeyDown(evt) {
