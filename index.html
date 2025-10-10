@@ -209,6 +209,7 @@
         function GanarPuntos() {
             score++;
             textoScore.innerHTML = score;
+            gameVel += 0.05;
         }
 
         function MoverObstaculos() {
@@ -276,6 +277,7 @@
             tipo_obstaculo = "cactus";
             suelo.classList.remove('suelo-agua');
             suelo.classList.remove('suelo-roca');
+            suelo.classList.remove('suelo-vlocan');
         }
     }
     </script>
