@@ -114,15 +114,23 @@
         }
 
         function Update() {
-            if (score > 5) {
+            if (score > 4) {
                 tipo_obstaculo = "roco";
                 document.querySelector('.suelo').classList.add('suelo-roca');
                 document.querySelector('.suelo').classList.remove('suelo-agua');
+                document.querySelector('.suelo').classList.remove('suelo-volcan');
             }
-            if (score > 10) {
+            if (score > 9) {
                 tipo_obstaculo = "wer";
                 document.querySelector('.suelo').classList.remove('suelo-roca');
+                document.querySelector('.suelo').classList.remove('suelo-volcanq');
                 document.querySelector('.suelo').classList.add('suelo-agua');
+            }
+            if (score > 19) {
+                tipo_obstaculo = "lava";
+                document.querySelector('.suelo').classList.remove('suelo-roca');
+                document.querySelector('.suelo').classList.remove('suelo-roca');
+                document.querySelector('.suelo').classList.add('suelo-volcan');
             }
             if (parado) return;
             MoverSuelo();

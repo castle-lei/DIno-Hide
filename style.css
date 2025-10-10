@@ -4,6 +4,10 @@
     padding: 0;
 
 }
+.cactus, .roco, .lava, .wer{
+    border-color: #000;
+    
+}
 body{
     height: 100vh;
     display: flex;
@@ -114,12 +118,6 @@ body{
     background: url('roca.png') repeat-x 0px 0px;
     background-size: 50% 42px;
 }
-.salt{
-    width: 100px;
-    height: 100px;
-    background-color: #ffffff;
-
-}
 .suelo-agua{
     width: 200%;
     height: 42px;
@@ -129,6 +127,22 @@ body{
     background: url('wat.png') repeat-x 0px 0px;
     background-size: 50% 42px;
 }
+.suelo-volcan{
+    width: 200%;
+    height: 42px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url('lav.png') repeat-x 0px 0px;
+    background-size: 50% 42px;
+}
+.salt{
+    width: 100px;
+    height: 100px;
+    background-color: #ffffff;
+
+}
+
 .score{
     width: 100px;
     height: 30px;
@@ -176,6 +190,17 @@ body{
     z-index: 1;
 
     background: url(roca\ grande.png) no-repeat;
+}
+.lava{
+    width: 46px;
+    height: 96px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(lab.png) no-repeat;
 }
 @keyframes dino-animations{
     from{background-position-x:-84px;}
