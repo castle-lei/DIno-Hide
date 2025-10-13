@@ -10,41 +10,17 @@
         <div class="score">0</div>
         <div class="suelo"></div>
     </div>
-    <div id="mobile-controls">
-        <button id="btn-saltar">Saltar</button>
-        <button id="btn-reiniciar">Reiniciar</button>
-    </div>
-
+    <div class="salt" onclick=""></div>
     <script>
         var time = new Date();
         var deltaTime = 0;
         var opsion  = prompt('Elige  el  personaje: 1. Dino  2. Dino Mom  3. Dino Dad 4.Dino Sister' );
-        
-        
-
 
         if (document.readyState == "complete" || document.readyState == "interactive") {
             setTimeout(Init, 1);
         } else {
             document.addEventListener("DOMContentLoaded", Init);
         }
-            function ActivarControlesTactiles() {
-        document.getElementById("btn-saltar").addEventListener("touchstart", () => {
-        if (!saltando && !parado) {
-        Saltar();
-        }
-    document.getElementById("btn-reiniciar").addEventListener("touchstart", () => {
-    if (parado) {
-      reset();
-    }
-  });
-}
-
-);
-
-    document.getElementById("btn-reiniciar").addEventListener("touchstart", () => {
-        reset();
-    });
 
         function Init() {
             time = new Date();
@@ -91,8 +67,6 @@
             suelo = document.querySelector(".suelo");
             textoScore = document.querySelector(".score");
             document.addEventListener("keydown", HandleKeyDown);
-              ActivarControlesTactiles(); // ← aquí
-
         }
 
         function HandleKeyDown(evt) {
@@ -111,23 +85,15 @@
         }
 
         function Update() {
-            if (score > 4) {
+            if (score > 5) {
                 tipo_obstaculo = "roco";
                 document.querySelector('.suelo').classList.add('suelo-roca');
                 document.querySelector('.suelo').classList.remove('suelo-agua');
-                document.querySelector('.suelo').classList.remove('suelo-volcan');
             }
-            if (score > 9) {
+            if (score > 10) {
                 tipo_obstaculo = "wer";
                 document.querySelector('.suelo').classList.remove('suelo-roca');
-                document.querySelector('.suelo').classList.remove('suelo-volcanq');
                 document.querySelector('.suelo').classList.add('suelo-agua');
-            }
-            if (score > 19) {
-                tipo_obstaculo = "lava";
-                document.querySelector('.suelo').classList.remove('suelo-roca');
-                document.querySelector('.suelo').classList.remove('suelo-roca');
-                document.querySelector('.suelo').classList.add('suelo-volcan');
             }
             if (parado) return;
             MoverSuelo();
@@ -144,19 +110,18 @@
                 dino.classList.remove("dino2");
                 dino.classList.remove("dino3");
                 dino.classList.remove("dino4");
-
-        }
+            }
             else if (opsion == 3){
                 dino.classList.remove("dino2");
                 dino.classList.remove("dino4");
                 dino.classList.add("dino3");
-        }
+            }
             else if (opsion == 4){
                 dino.classList.remove("dino2");
                 dino.classList.remove("dino3");
                 dino.classList.add("dino4");
+            }
         }
-        
 
         function MoverDino() {
             dinoPosY += velY * deltaTime;
@@ -206,7 +171,6 @@
         function GanarPuntos() {
             score++;
             textoScore.innerHTML = score;
-            gameVel += 0.05;
         }
 
         function MoverObstaculos() {
@@ -262,7 +226,7 @@
         });
 
         function reset() {
-            opsion  = prompt('Elige  el  personaje: 1. Dino  2. Dino Mom  3. Dino Dad 4.Dino Sister' );
+            opsion  = prompt('Elige  el  personaje: 1. Dino  2. Dino Mom  3. Dino Dad 4. Dino Sister' );
             dino.classList.remove("dino-est");
             dino.classList.add("dino-run");
             parado = false;
@@ -274,11 +238,7 @@
             tipo_obstaculo = "cactus";
             suelo.classList.remove('suelo-agua');
             suelo.classList.remove('suelo-roca');
-            suelo.classList.remove('suelo-volcan');
-            gameVel = 1;
         }
-    }
-            }
     </script>
 </body>
 </html>
