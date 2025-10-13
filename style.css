@@ -4,10 +4,9 @@
     padding: 0;
 
 }
-.cactus, .roco, .lava, .wer{
-    border-color: #000;
+
     
-}
+
 body{
     height: 100vh;
     display: flex;
