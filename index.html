@@ -11,8 +11,7 @@
         <div class="suelo"></div>
     </div>
     <div id="mobile-controls">
-        <button id="btn-saltar">Saltar</button>
-        <button id="btn-reiniciar">Reiniciar</button>
+        <button id="btn-saltar" onclick="Saltar()">Saltar</button>
     </div>
 
     <script>
@@ -113,6 +112,7 @@
             DecidirCrearObstaculos();
             MoverObstaculos();
             DetectarColision();
+            manejarReinicio();
             if (opsion == 2){
                 dino.classList.remove("dino3");
                 dino.classList.remove("dino4");
@@ -202,10 +202,11 @@
         function DetectarColision() {
             for (var i = 0; i < obstaculos.length; i++) {
                 if (obstaculos[i].posX > dinoPosX + dino.clientWidth) {
+                    
                     break;
                 } else {
                     if (isCollision(dino, obstaculos[i], 0, 0, 0, 0)) {
-                        GameOver();
+                    Estrellarse();    
                     }
                 }
             }
@@ -221,23 +222,17 @@
                 (aRect.left + paddingLeft > (bRect.left + bRect.width))
             );
         }
-
-        function GameOver() {
-            Estrellarse();
-        }
+    function manejarReinicio() {
+    if (parado) {
+        reset();
+    }
+}
 
         function Estrellarse() {
             dino.classList.remove("dino-run");
             dino.classList.add("dino-est");
             parado = true;
         }
-
-        document.addEventListener("keydown", function(evt) {
-            if (parado && evt.keyCode === 13) {
-                reset();
-            }
-        });
-
         function reset() {
             opsion  = prompt('Elige  el  personaje: 1. Dino  2. Dino Mom  3. Dino Dad 4. Dino Sister' );
             dino.classList.remove("dino-est");
