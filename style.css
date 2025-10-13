@@ -23,6 +23,16 @@ body{
     
 
 }
+.box2{
+    width: 920px;
+    height: 280px;
+    margin: 0 auto;
+    position: relative;
+    background: linear-gradient(#000000,#434343);
+    overflow: hidden;
+    
+
+}
 .dino{
     width: 84px;
     height: 84px;
@@ -156,6 +166,15 @@ body{
     background: url('bruj.png') repeat-x 0px 0px;
     background-size: 50% 42px;
 }
+.suelo-cielo{
+    width: 200%;
+    height: 42px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url('1w.png') repeat-x 0px 0px;
+    background-size: 50% 42px;
+}
 .salt{
     width: 100px;
     height: 100px;
@@ -219,6 +238,20 @@ body{
 
     background: url(esc.png) no-repeat;
 }
+.clo{
+
+    width: 46px;
+    height: 96px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(2.png) no-repeat;
+}
+
+
 .wer{
     width: 46px;
     height: 96px;
