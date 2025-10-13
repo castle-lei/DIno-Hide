@@ -84,7 +84,7 @@
         }
 
         function Update() {
-            if (score > 4) {
+         if (score > 4) {
                 tipo_obstaculo = "roco";
                 document.querySelector('.suelo').classList.add('suelo-roca');
                 document.querySelector('.suelo').classList.remove('suelo-agua');
@@ -95,12 +95,25 @@
                 document.querySelector('.suelo').classList.remove('suelo-roca');
                 document.querySelector('.suelo').classList.remove('suelo-volcan');
                 document.querySelector('.suelo').classList.add('suelo-agua');
+                document.querySelector('.suelo').classList.remove('suelo-bruja');
             }
             if (score > 14) {
                 tipo_obstaculo = "lava";
                 document.querySelector('.suelo').classList.remove('suelo-roca');
                 document.querySelector('.suelo').classList.add('suelo-volcan');
                 document.querySelector('.suelo').classList.remove('suelo-agua');
+                document.querySelector('.suelo').classList.remove('suelo-bruja');
+            }
+            if (score > 19) {
+                dino.classList.remove("dino2");
+                dino.classList.remove("dino3");
+                dino.classList.remove("dino4");
+                dino.classList.add("dino5");
+                tipo_obstaculo = "bruja";
+                document.querySelector('.suelo').classList.add('suelo-bruja');
+                document.querySelector('.suelo').classList.remove('suelo-agua');
+                document.querySelector('.suelo').classList.remove('suelo-volcan');
+                document.querySelector('.suelo').classList.remove('suelo-roca');
             }
             if (parado) return;
             MoverSuelo();
@@ -113,20 +126,24 @@
                 dino.classList.remove("dino3");
                 dino.classList.remove("dino4");
                 dino.classList.add("dino2");
+                dino.classList.remove("dino5");
             }
             else if (opsion == 1){
                 dino.classList.remove("dino2");
                 dino.classList.remove("dino3");
                 dino.classList.remove("dino4");
+                dino.classList.remove("dino5");
             }
             else if (opsion == 3){
                 dino.classList.remove("dino2");
                 dino.classList.remove("dino4");
                 dino.classList.add("dino3");
+                dino.classList.remove("dino5");
             }
             else if (opsion == 4){
                 dino.classList.remove("dino2");
                 dino.classList.remove("dino3");
+                dino.classList.remove("dino5");
                 dino.classList.add("dino4");
             }
         }
@@ -244,6 +261,7 @@
             suelo.classList.remove('suelo-roca');
             suelo.classList.remove('suelo-volcan');
             gameVel = 1;
+            document.querySelector('.suelo').classList.remove('suelo-bruja');
         }
     </script>
 </body>

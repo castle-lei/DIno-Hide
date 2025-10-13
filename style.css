@@ -91,6 +91,18 @@ body{
     background-size: 336px 84px;
     background-position-x:0px ;
 }
+.dino5{
+    width: 84px;
+    height: 84px;
+
+    position: absolute;
+    bottom: 22px;;
+    left: 42px ;
+    z-index: 2;
+    background: url('dino5.png') repeat-x 0px 0px;
+    background-size: 336px 84px;
+    background-position-x:0px ;
+}
 .dino-run{
     animation: dino-animations 0.25s steps(2) infinite;
 }
@@ -133,6 +145,15 @@ body{
     bottom: 0;
     left: 0;
     background: url('lav.png') repeat-x 0px 0px;
+    background-size: 50% 42px;
+}
+.suelo-bruja{
+    width: 200%;
+    height: 42px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url('bruj.png') repeat-x 0px 0px;
     background-size: 50% 42px;
 }
 .salt{
@@ -187,6 +208,17 @@ body{
     background: url(cactus1.png) no-repeat;
 }
 
+.bruja{
+    width: 46px;
+    height: 96px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(esc.png) no-repeat;
+}
 .wer{
     width: 46px;
     height: 96px;
