@@ -57,7 +57,7 @@
         var tiempoMIN = 0.7;
         var tiempoMAX = 1.8;
         var obstaculoPosY = 16;
-        var obstaculos = [];
+        var obstaculos = []; 
         var tipo_obstaculo = "cactus";
 
         function Start() {
@@ -84,15 +84,26 @@
         }
 
         function Update() {
+            var obst = Math.floor(Math.random() * 2);
          if (score > 4) {
-                tipo_obstaculo = "roco";
+                if (obst == 0){
+                    tipo_obstaculo = "roco";
+                }
+                else if (obst == 1){
+                    tipo_obstaculo = "roco2";
+                }
                 document.querySelector('.suelo').classList.add('suelo-roca');
                 document.querySelector('.suelo').classList.remove('suelo-agua');
                 document.querySelector('.suelo').classList.remove('suelo-volcan');
                 document.querySelector('.suelo').classList.remove('suelo-cielo');
             }
             if (score > 9) {
-                tipo_obstaculo = "wer";
+                if (obst == 0){
+                    tipo_obstaculo = "wer";
+                }
+                else if (obst == 1){
+                    tipo_obstaculo = "wer2";
+                }
                 document.querySelector('.suelo').classList.remove('suelo-roca');
                 document.querySelector('.suelo').classList.remove('suelo-volcan');
                 document.querySelector('.suelo').classList.add('suelo-agua');
@@ -100,20 +111,26 @@
                 document.querySelector('.suelo').classList.remove('suelo-cielo');
             }
             if (score > 14) {
-                tipo_obstaculo = "lava";
+                                if (obst == 0){
+                    tipo_obstaculo = "lava";
+                }
+                else if (obst == 1){
+                    tipo_obstaculo = "lava2";
+                }
                 document.querySelector('.suelo').classList.remove('suelo-roca');
                 document.querySelector('.suelo').classList.add('suelo-volcan');
                 document.querySelector('.suelo').classList.remove('suelo-agua');
                 document.querySelector('.suelo').classList.remove('suelo-bruja');
                 document.querySelector('.suelo').classList.remove('suelo-cielo');
             }
-            if (score > 19) {/*
-                dino.classList.remove("dino2");
-                dino.classList.remove("dino3");
-                dino.classList.remove("dino4");
-                dino.classList.add("dino5");
-                */
-                tipo_obstaculo = "bruja";
+            if (score > 19) {
+                
+                if (obst == 0){
+                    tipo_obstaculo = "bruja";
+                }
+                else if (obst == 1){
+                    tipo_obstaculo = "bruja2";
+                }
                 document.querySelector('.suelo').classList.add('suelo-bruja');
                 document.querySelector('.suelo').classList.remove('suelo-agua');
                 document.querySelector('.suelo').classList.remove('suelo-volcan');
@@ -121,12 +138,32 @@
                 document.querySelector('.suelo').classList.remove('suelo-cielo');
             }
             if (score > 24) {
-                tipo_obstaculo = "clo";
+                if (obst == 0){
+                    tipo_obstaculo = "clo";
+                }
+                else if (obst == 1){
+                    tipo_obstaculo = "clo2";
+                }
                 document.querySelector('.suelo').classList.remove('suelo-roca');
                 document.querySelector('.suelo').classList.add('suelo-cielo');
                 document.querySelector('.suelo').classList.remove('suelo-agua');
                 document.querySelector('.suelo').classList.remove('suelo-bruja');
                 document.querySelector('.suelo').classList.remove('suelo-volcan');
+            }
+            if (score < 5){
+                
+                if (obst == 0){
+                    tipo_obstaculo = "cactus";
+                }
+                else if (obst == 1){
+                    tipo_obstaculo = "cactus2";
+                }
+                    
+                    document.querySelector('.suelo').classList.remove('suelo-agua');
+                    document.querySelector('.suelo').classList.remove('suelo-roca');
+                    document.querySelector('.suelo').classList.remove('suelo-volcan');
+                    document.querySelector('.suelo').classList.remove('suelo-bruja');
+                    document.querySelector('.suelo').classList.remove('suelo-cielo');
             }
             if (parado) return;
             MoverSuelo();

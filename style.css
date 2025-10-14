@@ -226,7 +226,17 @@ body{
 
     background: url(cactus1.png) no-repeat;
 }
+.cactus2{
+    width: 96px;
+    height: 66px;
 
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(cactus2.png) no-repeat;
+}
 .bruja{
     width: 46px;
     height: 96px;
@@ -237,6 +247,17 @@ body{
     z-index: 1;
 
     background: url(esc.png) no-repeat;
+}
+.bruja2{
+    width: 96px;
+    height: 66px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(esc2.png) no-repeat;
 }
 .clo{
 
@@ -251,7 +272,17 @@ body{
     background: url(2.png) no-repeat;
 }
 
+.clo2{
+    width: 96px;
+    height: 66px;
 
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(3.png) no-repeat;
+}
 .wer{
     width: 46px;
     height: 96px;
@@ -262,6 +293,17 @@ body{
     z-index: 1;
 
     background: url(wer.png) no-repeat;
+}
+.wer2{
+    width: 96px;
+    height: 66px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(wer2.png) no-repeat;
 }
 .roco{
     width: 46px;
@@ -274,6 +316,17 @@ body{
 
     background: url(roca\ grande.png) no-repeat;
 }
+.roco2{
+    width: 96px;
+    height: 66px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(roca2.png) no-repeat;
+}
 .lava{
     width: 46px;
     height: 96px;
@@ -284,6 +337,17 @@ body{
     z-index: 1;
 
     background: url(lab.png) no-repeat;
+}
+.lava2{
+    width: 96px;
+    height: 66px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(lab2.png) no-repeat;
 }
 @keyframes dino-animations{
     from{background-position-x:-84px;}
