@@ -349,6 +349,50 @@ body{
 
     background: url(lab2.png) no-repeat;
 }
+.suelo-park{
+
+    width: 200%;
+    height: 42px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url('ps.png') repeat-x 0px 0px;
+    background-size: 50% 42px;
+    
+}
+.park{
+    width: 46px;
+    height: 96px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(p.png) no-repeat;
+}
+.park1{
+    width: 96px;
+    height: 66px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(p1.png) no-repeat;
+}
+.park2{
+    width: 46px;
+    height: 96px;
+
+    position: absolute;
+    bottom: 16px;
+    left: 600px;
+    z-index: 1;
+
+    background: url(p2.png) no-repeat;
+}
 @keyframes dino-animations{
     from{background-position-x:-84px;}
     to{background-position-x:-252px;}
