@@ -218,7 +218,6 @@
                 dino.classList.remove("dino3");
                 dino.classList.remove("dino4");
                 dino.classList.add("dino2");
-                dino.classList.remove("dino5");
                 dino.classList.remove("dino6");
             }
             else if (opsion == 1){
@@ -241,15 +240,6 @@
                 dino.classList.remove("dino5");
                 dino.classList.add("dino4");
                 dino.classList.remove("dino6");
-
-            }
-                        else if (opsion == 4){
-                dino.classList.remove("dino2");
-                dino.classList.remove("dino3");
-                dino.classList.remove("dino5");
-                dino.classList.add("dino4");
-                dino.classList.remove("dino6");
-
             }
             else if (opsion == 6){
                 dino.classList.remove("dino2");
