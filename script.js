@@ -95,7 +95,9 @@
             buy_live2 = true;
         }
             
-    
+        if (score == 50 ) {
+            window.location.href = "win.html";
+        }
                 
          if (score > 4) {
                 
