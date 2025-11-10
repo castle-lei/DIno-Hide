@@ -73,7 +73,6 @@
                 dino.classList.add("dino-jump");
             }
         }
-        var liv2  = 0;
         function Update() {
             var obst = Math.floor(Math.random() * 2);
             var obst2 = Math.floor(Math.random() * 3);
@@ -83,7 +82,6 @@
             buy_live2 = true;
         }
      
-      
    
         if (score == 15 ) {
             live2 =  1;
@@ -219,24 +217,45 @@
                 dino.classList.remove("dino4");
                 dino.classList.add("dino2");
                 dino.classList.remove("dino5");
+                dino.classList.remove("dino6");
             }
             else if (opsion == 1){
                 dino.classList.remove("dino2");
                 dino.classList.remove("dino3");
                 dino.classList.remove("dino4");
                 dino.classList.remove("dino5");
+                dino.classList.remove("dino6");
             }
             else if (opsion == 3){
                 dino.classList.remove("dino2");
                 dino.classList.remove("dino4");
                 dino.classList.add("dino3");
                 dino.classList.remove("dino5");
+                dino.classList.remove("dino6");
             }
             else if (opsion == 4){
                 dino.classList.remove("dino2");
                 dino.classList.remove("dino3");
                 dino.classList.remove("dino5");
                 dino.classList.add("dino4");
+                dino.classList.remove("dino6");
+
+            }
+                        else if (opsion == 4){
+                dino.classList.remove("dino2");
+                dino.classList.remove("dino3");
+                dino.classList.remove("dino5");
+                dino.classList.add("dino4");
+                dino.classList.remove("dino6");
+
+            }
+            else if (opsion == 6){
+                dino.classList.remove("dino2");
+                dino.classList.remove("dino3");
+                dino.classList.remove("dino5");
+                dino.classList.remove("dino4");
+                dino.classList.add("dino6");
+
             }
         }
 
@@ -368,6 +387,7 @@
             gameVel = 1;
             document.querySelector('.suelo').classList.remove('suelo-bruja');
             document.querySelector('.suelo').classList.remove('suelo-cielo');
+            document.querySelector('.suelo').classList.remove('suelo-park');
             if (buy_live2){
                 live2 = 1;
             } 

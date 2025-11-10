@@ -113,6 +113,18 @@ body{
     background-size: 336px 84px;
     background-position-x:0px ;
 }
+.dino6{
+    width: 84px;
+    height: 84px;
+
+    position: absolute;
+    bottom: 22px;;
+    left: 42px ;
+    z-index: 2;
+    background: url('dino6.png') repeat-x 0px 0px;
+    background-size: 336px 84px;
+    background-position-x:0px ;
+}
 .dino-run{
     animation: dino-animations 0.25s steps(2) infinite;
 }

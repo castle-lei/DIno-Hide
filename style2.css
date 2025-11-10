@@ -1,0 +1,24 @@
+body{
+    background-color: #8487e7;
+    justify-content: center;
+
+}
+div{
+    align-items: center;
+    text-align: center;
+    background-color: rgb(48, 186, 140);
+    box-shadow:  rgb(25, 96, 72);
+}
+h3{
+    font-family: cursive;
+    color: gold;
+}
+h4{
+    font-family: cursive;
+    color: goldenrod;
+}
+#ss{
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+    font-family: fantasy;
+}
